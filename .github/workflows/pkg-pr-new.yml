@@ -1,0 +1,39 @@
+name: Publish Any Commit
+
+on:
+    push:
+        branches:
+            - '**'
+
+    pull_request:
+        branches:
+            - 'main'
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        name: 🚀 Publish to pkg.pr.new
+        steps:
+            -   name: 👀 Checkout
+                uses: actions/checkout@v4
+
+            -   name: ⚙️ Setup pnpm
+                uses: pnpm/action-setup@v4
+                with:
+                    run_install: false
+
+            -   name: ✨ Setup node 23.x
+                uses: actions/setup-node@v4
+                with:
+                    node-version: '23.x'
+                    registry-url: https://registry.npmjs.org
+                    cache: pnpm
+
+            -   name: 📦️ Install dependencies
+                run: pnpm install --frozen-lockfile
+
+            -   name: 🔨 Build
+                run: pnpm build
+
+            -   name: 🚀 Publish
+                run: pnpx pkg-pr-new publish --compact

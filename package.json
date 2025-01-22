@@ -1,0 +1,61 @@
+{
+    "name": "vitepress-plugin-example",
+    "description": "VitePress plugin for code examples that can be previewed.",
+    "type": "module",
+    "version": "1.0.0",
+    "license": "MIT",
+    "funding": "https://github.com/sponsors/basmilius",
+    "homepage": "https://github.com/basmilius/vitepress-plugin-example",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/basmilius/vitepress-plugin-example.git"
+    },
+    "keywords": [
+        "vite",
+        "vitepress",
+        "plugin",
+        "example"
+    ],
+    "author": {
+        "email": "bas@mili.us",
+        "name": "Bas Milius",
+        "url": "https://bas.dev"
+    },
+    "scripts": {
+        "build": "pnpm esbuild && tsc",
+        "dev": "pnpm esbuild --watch",
+        "esbuild": "esbuild src/index.ts --bundle --sourcemap --external:* --platform=node --target=esnext --format=esm --outfile=dist/plugin.js"
+    },
+    "engines": {
+        "node": ">=23"
+    },
+    "files": [
+        "dist",
+        "src"
+    ],
+    "publishConfig": {
+        "access": "public",
+        "provenance": true
+    },
+    "main": "./dist/plugin.js",
+    "types": "./dist/index.d.ts",
+    "typings": "./dist/index.d.ts",
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "default": "./dist/plugin.js"
+        }
+    },
+    "dependencies": {
+        "markdown-it": "^14.1.0",
+        "markdown-it-container": "^4.0.0"
+    },
+    "devDependencies": {
+        "@types/markdown-it": "^14.1.2",
+        "@types/markdown-it-container": "^2.0.10",
+        "@types/node": "^22.10.7",
+        "esbuild": "^0.24.2",
+        "typescript": "^5.7.3"
+    }
+}
