@@ -71,9 +71,7 @@ const injectComponent = (env: any, path: string, componentName: string) => {
     }
 };
 
-const normalizeComponentName = (componentName: string) => componentName.replaceAll(/[_|-]+(\w)/g, ($0, $1) => {
-    return $1.toUpperCase();
-});
+const normalizeComponentName = (componentName: string) => componentName.replaceAll(/[_|-]+(\w)/g, (_, name) => name.toUpperCase());
 
 const directive = (md: MarkdownIt) => {
     md.use(MarkdownItContainer, 'example', {
