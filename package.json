@@ -2,7 +2,7 @@
     "name": "vitepress-plugin-example",
     "description": "VitePress plugin for code examples that can be previewed.",
     "type": "module",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "license": "MIT",
     "funding": "https://github.com/sponsors/basmilius",
     "homepage": "https://github.com/basmilius/vitepress-plugin-example",
@@ -54,7 +54,7 @@
     "devDependencies": {
         "@types/markdown-it": "^14.1.2",
         "@types/markdown-it-container": "^2.0.10",
-        "@types/node": "^22.10.7",
+        "@types/node": "^22.10.10",
         "esbuild": "^0.24.2",
         "typescript": "^5.7.3"
     }
