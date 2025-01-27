@@ -15,26 +15,22 @@ jobs:
             -   name: 👀 Checkout
                 uses: actions/checkout@v4
 
-            -   name: ⚙️ Setup pnpm
-                uses: pnpm/action-setup@v4
-                with:
-                    version: 9
-                    run_install: false
+            -   name: ⚙️ Setup Bun
+                uses: oven-sh/setup-bun@v2
 
             -   name: ✨ Setup node 23.x
                 uses: actions/setup-node@v4
                 with:
                     node-version: '23.x'
                     registry-url: https://registry.npmjs.org
-                    cache: pnpm
 
             -   name: 📦️ Install dependencies
-                run: pnpm install --frozen-lockfile
+                run: bun install --frozen-lockfile
 
             -   name: 🔨 Build
-                run: pnpm build
+                run: bun run build
 
             -   name: 🚀 Publish
-                run: pnpm publish --access public --no-git-checks
+                run: bun publish --access public
                 env:
-                    NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+                    NPM_CONFIG_TOKEN: ${{ secrets.NPM_TOKEN }}
