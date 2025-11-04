@@ -12,6 +12,8 @@ const SCRIPT_SETUP_COMMON_RE = /<\s*script\s+(setup|lang='ts'|lang="ts")?\s*(set
 const VALIDATE_CONTAINER_RE = /^example.*$/;
 
 const composeComponentName = (path: string): string => {
+    path = path.replace(/\\/g, '/');
+
     let running = true;
     const componentList: string[] = [];
 
