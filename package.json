@@ -2,7 +2,7 @@
     "name": "vitepress-plugin-example",
     "description": "VitePress plugin for code examples that can be previewed.",
     "type": "module",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "license": "MIT",
     "funding": "https://github.com/sponsors/basmilius",
     "homepage": "https://github.com/basmilius/vitepress-plugin-example",
@@ -51,13 +51,13 @@
         }
     },
     "dependencies": {
-        "markdown-it": "^14.1.0",
+        "markdown-it": "^14.1.1",
         "markdown-it-container": "^4.0.0"
     },
     "devDependencies": {
         "@types/markdown-it": "^14.1.2",
-        "@types/markdown-it-container": "^2.0.10",
-        "@types/node": "^24.10.0",
+        "@types/markdown-it-container": "^4.0.0",
+        "@types/node": "^25.5.0",
         "typescript": "^5.9.3"
     }
 }
