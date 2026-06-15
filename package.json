@@ -10,6 +10,9 @@
         "type": "git",
         "url": "git+https://github.com/basmilius/vitepress-plugin-example.git"
     },
+    "bugs": {
+        "url": "https://github.com/basmilius/vitepress-plugin-example/issues"
+    },
     "keywords": [
         "vite",
         "vitepress",
