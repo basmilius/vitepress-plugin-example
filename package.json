@@ -1,63 +1,63 @@
 {
-    "name": "vitepress-plugin-example",
-    "description": "VitePress plugin for code examples that can be previewed.",
-    "type": "module",
-    "version": "0.0.0",
-    "license": "MIT",
-    "funding": "https://github.com/sponsors/basmilius",
-    "homepage": "https://github.com/basmilius/vitepress-plugin-example",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/basmilius/vitepress-plugin-example.git"
-    },
-    "bugs": {
-        "url": "https://github.com/basmilius/vitepress-plugin-example/issues"
-    },
-    "keywords": [
-        "vite",
-        "vitepress",
-        "plugin",
-        "example"
-    ],
-    "author": {
-        "email": "bas@mili.us",
-        "name": "Bas Milius",
-        "url": "https://bas.dev"
-    },
-    "scripts": {
-        "build": "$npm_execpath bundle && tsc",
-        "dev": "$npm_execpath bundle --watch",
-        "bundle": "bun build src/index.ts --sourcemap --external:* --target=node --format=esm --outdir=dist"
-    },
-    "engines": {
-        "node": ">=23"
-    },
-    "files": [
-        "dist",
-        "src"
-    ],
-    "publishConfig": {
-        "access": "public",
-        "provenance": true
-    },
-    "main": "./dist/index.js",
-    "types": "./dist/index.d.ts",
-    "typings": "./dist/index.d.ts",
-    "sideEffects": false,
-    "exports": {
-        ".": {
-            "types": "./dist/index.d.ts",
-            "default": "./dist/index.js"
-        }
-    },
-    "dependencies": {
-        "markdown-it": "^14.1.1",
-        "markdown-it-container": "^4.0.0"
-    },
-    "devDependencies": {
-        "@types/markdown-it": "^14.1.2",
-        "@types/markdown-it-container": "^4.0.0",
-        "@types/node": "^25.5.0",
-        "typescript": "^5.9.3"
+  "name": "vitepress-plugin-example",
+  "description": "VitePress plugin for code examples that can be previewed.",
+  "type": "module",
+  "version": "0.0.0",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/basmilius",
+  "homepage": "https://github.com/basmilius/vitepress-plugin-example",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basmilius/vitepress-plugin-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/basmilius/vitepress-plugin-example/issues"
+  },
+  "keywords": [
+    "vite",
+    "vitepress",
+    "plugin",
+    "example"
+  ],
+  "author": {
+    "email": "bas@mili.us",
+    "name": "Bas Milius",
+    "url": "https://bas.dev"
+  },
+  "scripts": {
+    "build": "$npm_execpath bundle && tsc",
+    "dev": "$npm_execpath bundle --watch",
+    "bundle": "bun build src/index.ts --sourcemap --external:* --target=node --format=esm --outdir=dist"
+  },
+  "engines": {
+    "node": ">=23"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
+  },
+  "dependencies": {
+    "markdown-it": "^14.1.1",
+    "markdown-it-container": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "^14.1.2",
+    "@types/markdown-it-container": "^4.0.0",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
+  }
 }
