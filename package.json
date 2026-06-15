@@ -2,7 +2,7 @@
     "name": "vitepress-plugin-example",
     "description": "VitePress plugin for code examples that can be previewed.",
     "type": "module",
-    "version": "1.5.0",
+    "version": "0.0.0",
     "license": "MIT",
     "funding": "https://github.com/sponsors/basmilius",
     "homepage": "https://github.com/basmilius/vitepress-plugin-example",
